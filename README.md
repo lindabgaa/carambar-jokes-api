@@ -9,11 +9,11 @@ L’**API Blagues Carambar** est une application web développée avec **Node.js
 
 ## Technologies
 
-• **Node.js** : Environnement d’exécution JavaScript côté serveur.
-• **Express** : Framework minimaliste pour construire des applications web et APIs.
-• **Sequelize** : ORM pour interagir avec la base de données SQLite.
-• **SQLite** : Système de gestion de base de données léger.
-• **Swagger** : Outil pour documenter et tester des APIs.
+- **Node.js** : Environnement d’exécution JavaScript côté serveur.
+- **Express** : Framework minimaliste pour construire des applications web et APIs.
+- **Sequelize** : ORM pour interagir avec la base de données SQLite.
+- **SQLite** : Système de gestion de base de données léger.
+- **Swagger** : Outil pour documenter et tester des APIs.
 
 ## Installation & Configuration
 
