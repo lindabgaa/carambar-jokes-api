@@ -4,11 +4,11 @@ const swagger = require("./config/swagger");
 const jokeRoutes = require("./routes/jokeRoutes.js");
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 // Configuration CORS
 const corsOptions = {
-  origin: "https://lindabgaa.github.io",
+  origin: ["https://lindabgaa.github.io", "http://localhost:10000"],
   methods: ["GET", "POST", "OPTIONS"],
 };
 

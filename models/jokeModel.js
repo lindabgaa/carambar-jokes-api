@@ -8,6 +8,7 @@ const Joke = sequelize.define("joke", {
     validate: {
       notEmpty: true,
     },
+    unique: true,
   },
   answer: {
     type: DataTypes.STRING,
