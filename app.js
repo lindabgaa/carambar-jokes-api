@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 // Configuration CORS
 const corsOptions = {
   origin: "https://lindabgaa.github.io/carambar-co-landing-page/",
-  methods: ["GET", "POST"],
+  methods: ["GET", "POST", "OPTIONS"],
 };
 
 app.use(cors(corsOptions));
