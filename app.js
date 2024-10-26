@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3000;
 
 // Configuration CORS
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://lindabgaa.github.io/carambar-co-landing-page/",
   methods: ["GET", "POST"],
 };
 
