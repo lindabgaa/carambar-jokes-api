@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const swagger = require("./config/swagger");
 const jokeRoutes = require("./routes/jokeRoutes.js");
+const sequelize = require("./config/database.js");
 
 const app = express();
 const PORT = process.env.PORT || 10000;
@@ -23,6 +24,14 @@ app.get("/", (req, res) => {
   );
 });
 
-app.listen(PORT, () => {
-  console.log(`Le serveur est lancé sur le port ${PORT}`);
-});
+sequelize
+  .authenticate()
+  .then(() => {
+    console.log("Connexion à la base de données réussie !");
+    app.listen(PORT, () => {
+      console.log(`Le serveur est lancé sur le port ${PORT}`);
+    });
+  })
+  .catch((error) => {
+    console.error("Impossible de se connecter à la base de données :", error);
+  });
