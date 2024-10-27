@@ -12,7 +12,8 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "https://blagues-carambar-api.onrender.com/api/v1",
+        url:
+          process.env.API_URL || `http://localhost:${process.env.PORT || 3000}`,
       },
     ],
   },

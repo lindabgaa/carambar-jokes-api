@@ -11,8 +11,8 @@ const PORT = process.env.PORT || 3000;
 
 // Configuration CORS
 const corsOptions = {
-  origin: ["https://lindabgaa.github.io", "http://localhost:10000"],
-  methods: ["GET", "POST", "OPTIONS"],
+  origin: process.env.CORS_ORIGINS.split(","),
+  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
 };
 
 // Middleware

@@ -19,7 +19,6 @@ L’**API Blagues Carambar** est une application web développée avec **Node.js
 
 - Clonez le dépôt : `git clone https://github.com/lindabgaa/api-blagues-carambar.git`
 - Accédez au dossier du projet : `cd api-blagues-carambar`
-- Installez les dépendances : `npm install`
-- Créez le fichier de base de données (s'il n'existe pas déjà) : `touch database.sqlite`
-- Peuplez la base de données avec une cinquantaine de blagues : `npm run seed`
-- Lancez le serveur : `npm run dev`
+- Lancez le script de configuration : `npm run setup`
+- Lancez le serveur de development : `npm run dev`
+- Consultez la documentation de l'API : `http://localhost:YOUR_PORT/api/v1/docs`
