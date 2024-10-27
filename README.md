@@ -27,4 +27,4 @@ L’**API Blagues Carambar** est une application web développée avec **Node.js
   - `API_URL` # URL de déploiement de l'API
 - Lancez le script de configuration : `npm run setup`
 - Lancez le serveur de development : `npm run dev`
-- Consultez la documentation de l'API : `http://localhost:YOUR_PORT/api/v1/docs`
+- Consultez la documentation de l'API : `http://localhost:PORT/api/v1/docs`
