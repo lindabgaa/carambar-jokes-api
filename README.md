@@ -19,6 +19,12 @@ L’**API Blagues Carambar** est une application web développée avec **Node.js
 
 - Clonez le dépôt : `git clone https://github.com/lindabgaa/api-blagues-carambar.git`
 - Accédez au dossier du projet : `cd api-blagues-carambar`
+- Créez un fichier .env : `touch .env`
+- Ajoutez les variables d’environnement nécessaires :
+  - `NODE_ENV` # Environnement d'éxécution (development, test ou production)
+  - `PORT` # (ex: 8080)
+  - `CORS_ORIGINS` # Origines autorisées pour les requêtes CORS
+  - `API_URL` # URL de déploiement de l'API
 - Lancez le script de configuration : `npm run setup`
 - Lancez le serveur de development : `npm run dev`
 - Consultez la documentation de l'API : `http://localhost:YOUR_PORT/api/v1/docs`
