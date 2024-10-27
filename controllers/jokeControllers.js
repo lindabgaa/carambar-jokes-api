@@ -1,4 +1,4 @@
-const sequelize = require("../config/database");
+const sequelize = require("../config/db");
 const Joke = require("../models/jokeModel");
 
 const handleError = (res, statusCode = 500, message, error = null) => {

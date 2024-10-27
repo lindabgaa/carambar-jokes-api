@@ -1,4 +1,4 @@
-const sequelize = require("../config/database");
+const sequelize = require("../config/db");
 const Joke = require("../models/jokeModel");
 
 // Fonction pour alimenter la base de données avec des blagues (npm run seed)

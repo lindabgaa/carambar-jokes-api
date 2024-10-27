@@ -4,7 +4,7 @@ const express = require("express");
 const cors = require("cors");
 const swagger = require("./config/swagger");
 const jokeRoutes = require("./routes/jokeRoutes.js");
-const sequelize = require("./config/database.js");
+const sequelize = require("./config/db.js");
 
 const app = express();
 const PORT = process.env.PORT || 3000;

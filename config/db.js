@@ -1,9 +1,7 @@
 const { Sequelize } = require("sequelize");
-const config = require("../config/config.json");
+const config = require("./config.json");
 const env = process.env.NODE_ENV || "development";
-const dbConfig = config[env];
-
-console.log("dbConfig", dbConfig);
+const dbConfig = config[env]; // Configuration de la base de données en fonction de l'environnement
 
 const sequelize = new Sequelize({
   dialect: dbConfig.dialect,
