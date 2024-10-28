@@ -1,9 +1,7 @@
-const sequelize = require("../config/db");
 const Joke = require("../models/jokeModel");
 
 // Fonction pour alimenter la base de données avec des blagues (npm run seed)
 // Seule les questions non existantes en base seront ajoutées
-
 const seedData = async () => {
   console.log("Démarrage de la seed des blagues...");
 
