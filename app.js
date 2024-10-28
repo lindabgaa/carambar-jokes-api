@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
 });
 
 // Route de statut de l'API (Uptime Robot)
-app.get("/statut", async (req, res) => {
+app.get("/api/v1/statut", async (req, res) => {
   const API_KEY = process.env.UPTIME_ROBOT_API_KEY;
   const MONITOR_ID = process.env.UPTIME_ROBOT_MONITOR_ID;
   const url = `https://api.uptimerobot.com/v2/getMonitors`;
