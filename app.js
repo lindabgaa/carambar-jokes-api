@@ -17,7 +17,7 @@ const corsOptions = {
 
 // Middleware
 app.use(cors(corsOptions));
-app.use(express.json());
+app.use(express.json()); // Permet de parser les requêtes en JSON
 app.use("/api/v1", jokeRoutes);
 swagger(app);
 
@@ -42,4 +42,48 @@ app.get("/", (req, res) => {
   res.send(
     "Bienvenue sur l'API de blagues Carambar ! Consultez /api/v1/docs pour voir la documentation complète."
   );
+});
+
+// Route de statut de l'API (Uptime Robot)
+app.get("/statut", async (req, res) => {
+  const API_KEY = process.env.UPTIME_ROBOT_API_KEY;
+  const MONITOR_ID = process.env.UPTIME_ROBOT_MONITOR_ID;
+  const url = `https://api.uptimerobot.com/v2/getMonitors`;
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        api_key: API_KEY,
+        format: "json",
+        monitors: MONITOR_ID,
+      }),
+    });
+
+    if (response.ok) {
+      const monitorData = await response.json();
+
+      const status =
+        monitorData.monitors[0].status === 2 ? "Online" : "Offline";
+      const color = status === "Online" ? "#97c40e" : "#cc573f";
+
+      return res.status(200).json({
+        schemaVersion: 1,
+        label: "API Status",
+        message: status,
+        color: color,
+      });
+    }
+
+    return res.status(response.status).json({
+      error: "Échec de la récupération du statut du moniteur",
+    });
+  } catch (error) {
+    return res.status(500).json({
+      error: "Erreur lors de la récupération des données",
+    });
+  }
 });
