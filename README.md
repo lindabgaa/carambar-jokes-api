@@ -1,13 +1,13 @@
 # API Blagues Carambar - Projet Express/Node.js
 
-![Project Status](https://img.shields.io/badge/Project%20Status-Finished-green)
-[![CodeFactor](https://www.codefactor.io/repository/github/lindabgaa/api-blagues-carambar/badge)](https://www.codefactor.io/repository/github/lindabgaa/api-blagues-carambar)
+![Project Status](https://img.shields.io/badge/Project%20Status-Finished-green?style=flat-square)
+[![CodeFactor](https://www.codefactor.io/repository/github/lindabgaa/api-blagues-carambar/badge?style=flat-square)](https://www.codefactor.io/repository/github/lindabgaa/api-blagues-carambar)
 
 L’**API Blagues Carambar** est une application web développée avec **Node.js** et **Express**. Utilisant **Sequelize** pour interagir avec une base de données **SQLite**, cette API offre des endpoints permettant d’ajouter de nouvelles blagues, de consulter toutes les blagues, d’obtenir une blague aléatoire, et d’accéder à une blague en fonction de son ID. Elle est documentée avec **Swagger**, ce qui simplifie son intégration et son utilisation. Le Projet est déployé sur **Render.com**.
 
 [Documentation de l'API](https://blagues-carambar-api.onrender.com/api/v1/docs/)
 
-![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fblagues-carambar-api.onrender.com%2Fstatut)
+[![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fblagues-carambar-api.onrender.com%2Fstatut&style=for-the-badge)](https://stats.uptimerobot.com/Upe7finkYZ/797919584)
 
 ## Technologies
 
