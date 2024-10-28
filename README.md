@@ -7,6 +7,8 @@ L’**API Blagues Carambar** est une application web développée avec **Node.js
 
 [Documentation de l'API](https://blagues-carambar-api.onrender.com/api/v1/docs/)
 
+![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fblagues-carambar-api.onrender.com%2Fstatut)
+
 ## Technologies
 
 - **Node.js** : Environnement d’exécution JavaScript côté serveur.
