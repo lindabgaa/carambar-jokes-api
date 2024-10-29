@@ -8,6 +8,7 @@ database.sqlite
 database.test.sqlite
 database.prod.sqlite
 
+
 # Logs
 logs
 *.log

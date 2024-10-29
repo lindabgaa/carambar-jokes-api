@@ -7,15 +7,9 @@ The **Carambar Jokes API** is a web application developed with **Node.js** and *
 
 [API Documentation]()
 
-[![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fblagues-carambar-api.onrender.com%2Fapi%2Fv1%2Fstatut&style=for-the-badge)](https://stats.uptimerobot.com/Upe7finkYZ/797919584)
-
 ## Tech Stack
 
-- **Node.js**: A JavaScript runtime environment for server-side execution.
-- **Express**: A minimalist framework for building web applications and APIs.
-- **Sequelize**: An ORM to interact with the SQLite database.
-- **SQLite**: A lightweight database management system.
-- **Swagger**: A tool for documenting and testing APIs.
+**Node.js**, **Express**, **Sequelize**, **SQLite**, **Swagger**
 
 ## Installation & Configuration
 
