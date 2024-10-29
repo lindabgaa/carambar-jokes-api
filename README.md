@@ -30,3 +30,7 @@ The **Carambar Jokes API** is a web application developed with **Node.js** and *
 - Run the setup script: `npm run setup`
 - Start the development server: `npm run dev`
 - Access the API documentation: `http://localhost:PORT/api/v1/docs`
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
