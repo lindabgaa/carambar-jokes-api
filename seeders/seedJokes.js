@@ -4,7 +4,6 @@ const Joke = require("../models/jokeModel");
 const seedData = async () => {
   console.log("Starting the jokes seeding process...");
 
-  // List of 51 jokes
   const jokes = [
     {
       question: "Quelle est la femelle du hamster ?",
@@ -210,6 +209,51 @@ const seedData = async () => {
       question: "Quel est le comble pour un électricien ?",
       answer: "De ne pas être au courant.",
     },
+    {
+      question: "Quel est le fruit que les poissons détestent le plus ?",
+      answer: "La pêche.",
+    },
+    {
+      question: "Je traverse les vitres sans les casser, qui suis-je ?",
+      answer: "Les rayons de soleil.",
+    },
+    {
+      question: "Quel super héros donne le plus vite l’heure ?",
+      answer: "Speed heure man ! (spider man)",
+    },
+    {
+      question: "Que font deux brosses à dent le 14 juillet ?",
+      answer: "Un feu dentifrice !",
+    },
+    {
+      question: "De quelle couleur sont les parapluies quand il pleut ?",
+      answer: "Ils sont tout verts !",
+    },
+    {
+      question: "Quel est le féminin d’un homme ?",
+      answer: "Une (h)omelette.",
+    },
+    {
+      question: "Comment se nomme l’ami que l’on ne supporte pas ?",
+      answer: "L’ami graine ! (la migraine)",
+    },
+    {
+      question:
+        "Quel est le point commun entre un professeur et un thermomètre ?",
+      answer: "On tremble quand ils marquent zéro !",
+    },
+    {
+      question: "Qu’est-ce qu’un steak qui n’en est pas un ?",
+      answer: "Une pastèque (pas steak) !",
+    },
+    {
+      question: "Pourquoi Napoléon n’a pas acheté une maison ?",
+      answer: "Parce qu’il avait déjà un bon appart (Bonaparte) !",
+    },
+    {
+      question: "Quel super héros joue le mieux au Baseball ?",
+      answer: "Batte Man ! (Batman)",
+    },
   ];
 
   let addedCount = 0;
@@ -218,6 +262,8 @@ const seedData = async () => {
     const existingJoke = await Joke.findOne({
       where: { question: joke.question },
     });
+
+    // Insert the joke only if it doesn't exist in the database
     if (!existingJoke) {
       await Joke.create(joke);
       addedCount++;
@@ -227,5 +273,5 @@ const seedData = async () => {
 };
 
 seedData().catch((err) => {
-  console.error("Error while inserting data:", err.message);
+  console.error("Error while inserting data in the database: ", err.message);
 });

@@ -77,11 +77,11 @@ app.get("/api/v1/status", async (req, res) => {
     }
 
     return res.status(response.status).json({
-      error: "Failed to retrieve monitor status",
+      error: `Failed to retrieve monitor status: ${response.statusText} || "Unknown error"`,
     });
   } catch (error) {
     return res.status(500).json({
-      error: "Error fetching data",
+      error: `Error fetching data: ${error.message || "Internal server error"}`,
     });
   }
 });
