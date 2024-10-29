@@ -1,32 +1,32 @@
-# API Blagues Carambar - Projet Express/Node.js
+# Carambar Jokes API - Express/Node.js Project
 
 ![Project Status](https://img.shields.io/badge/Project%20Status-Finished-green?style=flat-square)
-[![CodeFactor](https://www.codefactor.io/repository/github/lindabgaa/api-blagues-carambar/badge?style=flat-square)](https://www.codefactor.io/repository/github/lindabgaa/api-blagues-carambar)
+[![CodeFactor](https://www.codefactor.io/repository/github/lindabgaa/carambar-jokes-api/badge)](https://www.codefactor.io/repository/github/lindabgaa/carambar-jokes-api)
 
-L’**API Blagues Carambar** est une application web développée avec **Node.js** et **Express**. Utilisant **Sequelize** pour interagir avec une base de données **SQLite**, cette API offre des endpoints permettant d’ajouter de nouvelles blagues, de consulter toutes les blagues, d’obtenir une blague aléatoire, et d’accéder à une blague en fonction de son ID. Elle est documentée avec **Swagger**, ce qui simplifie son intégration et son utilisation. Le Projet est déployé sur **Render.com**.
+The **Carambar Jokes API** is a web application developed with **Node.js** and **Express**. Using **Sequelize** to interact with a **SQLite** database, this API provides endpoints to add new jokes, view all jokes, retrieve a random joke, and access a specific joke by its ID. It is documented with **Swagger**, making integration and usage straightforward. The project is deployed on **Render.com**.
 
-[Documentation de l'API](https://blagues-carambar-api.onrender.com/api/v1/docs/)
+[API Documentation]()
 
 [![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fblagues-carambar-api.onrender.com%2Fapi%2Fv1%2Fstatut&style=for-the-badge)](https://stats.uptimerobot.com/Upe7finkYZ/797919584)
 
-## Technologies
+## Tech Stack
 
-- **Node.js** : Environnement d’exécution JavaScript côté serveur.
-- **Express** : Framework minimaliste pour construire des applications web et APIs.
-- **Sequelize** : ORM pour interagir avec la base de données SQLite.
-- **SQLite** : Système de gestion de base de données léger.
-- **Swagger** : Outil pour documenter et tester des APIs.
+- **Node.js**: A JavaScript runtime environment for server-side execution.
+- **Express**: A minimalist framework for building web applications and APIs.
+- **Sequelize**: An ORM to interact with the SQLite database.
+- **SQLite**: A lightweight database management system.
+- **Swagger**: A tool for documenting and testing APIs.
 
 ## Installation & Configuration
 
-- Clonez le dépôt : `git clone https://github.com/lindabgaa/api-blagues-carambar.git`
-- Accédez au dossier du projet : `cd api-blagues-carambar`
-- Créez un fichier .env : `touch .env`
-- Ajoutez les variables d’environnement nécessaires :
-  - `NODE_ENV` # Environnement d'éxécution (development, test ou production)
-  - `PORT` # (ex: 8080)
-  - `CORS_ORIGINS` # Origines autorisées pour les requêtes CORS
-  - `API_URL` # URL de déploiement de l'API
-- Lancez le script de configuration : `npm run setup`
-- Lancez le serveur de development : `npm run dev`
-- Consultez la documentation de l'API : `http://localhost:PORT/api/v1/docs`
+- Clone the repository: `git clone https://github.com/lindabgaa/carambar-jokes-api.git`
+- Navigate to the project folder: `cd carambar-jokes-api`
+- Create a .env file: `touch .env`
+- Add the necessary environment variables:
+  - `NODE_ENV` # Runtime environment (development, test, or production)
+  - `PORT` # (e.g., 8080)
+  - `CORS_ORIGINS` # Allowed origins for CORS requests
+  - `API_URL` # Deployment URL of the API
+- Run the setup script: `npm run setup`
+- Start the development server: `npm run dev`
+- Access the API documentation: `http://localhost:PORT/api/v1/docs`

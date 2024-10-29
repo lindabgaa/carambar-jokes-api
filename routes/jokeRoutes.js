@@ -10,9 +10,9 @@ const {
 
 /**
  * @swagger
- * /blagues:
+ * /jokes:
  *   post:
- *     summary: Ajouter une nouvelle blague
+ *     summary: Add a new joke
  *     requestBody:
  *       required: true
  *       content:
@@ -28,7 +28,7 @@ const {
  *                 example: "Parce que sinon ils tombent dans le bateau."
  *     responses:
  *       '201':
- *         description: Blague ajoutée avec succès.
+ *         description: Joke successfully added.
  *         content:
  *           application/json:
  *             schema:
@@ -51,7 +51,7 @@ const {
  *                       type: string
  *                       example: "Parce que sinon ils tombent dans le bateau."
  *       '400':
- *         description: Erreur de validation des données d'entrée (question ou réponse invalide).
+ *         description: Input validation error (invalid question or answer).
  *         content:
  *           application/json:
  *             schema:
@@ -61,23 +61,23 @@ const {
  *                   type: string
  *                   example: "La question et la réponse doivent être des chaînes de caractères non vides."
  *       '500':
- *         description: Erreur lors de l'ajout de la blague.
+ *         description: Error adding the joke.
  *         content:
- *           application/json:
- *             schema:
- *               type: object
- *               properties:
- *                 message:
- *                   type: string
- *                   example: "Une erreur s'est produite lors de l'ajout de la blague. Veuillez réessayer."
+           application/json:
+             schema:
+               type: object
+               properties:
+                 message:
+                   type: string
+                   example: "Une erreur s'est produite lors de l'ajout de la blague. Veuillez réessayer."
  */
-router.post("/blagues", addJoke);
+router.post("/jokes", addJoke);
 
 /**
  * @swagger
- * /blagues:
+ * /jokes:
  *   get:
- *     summary: Récupérer toutes les blagues
+ *     summary: Retrieve all jokes
  *     responses:
  *       200:
  *         description: Liste des blagues disponibles
@@ -98,7 +98,7 @@ router.post("/blagues", addJoke);
  *                     type: string
  *                     example: "Parce que sinon ils tombent dans le bateau."
  *       404:
- *         description: Aucune blague trouvée
+ *         description: No jokes found
  *         content:
  *           application/json:
  *             schema:
@@ -108,7 +108,7 @@ router.post("/blagues", addJoke);
  *                   type: string
  *                   example: "Aucune blague disponible."
  *       500:
- *         description: Erreur lors de la récupération des blagues
+ *         description: Error retrieving jokes
  *         content:
  *           application/json:
  *             schema:
@@ -118,13 +118,13 @@ router.post("/blagues", addJoke);
  *                   type: string
  *                   example: "Une erreur s'est produite lors de la récupération des blagues. Veuillez réessayer."
  */
-router.get("/blagues", getAllJokes);
+router.get("/jokes", getAllJokes);
 
 /**
  * @swagger
- * /blagues/random:
+ * /jokes/random:
  *   get:
- *     summary: Récupérer une blague aléatoire
+ *     summary: Retrieve a random joke
  *     responses:
  *       200:
  *         description: Une blague aléatoire
@@ -144,7 +144,7 @@ router.get("/blagues", getAllJokes);
  *                   type: string
  *                   example: "Des salades."
  *       404:
- *         description: Aucune blague trouvée
+ *         description: No jokes found
  *         content:
  *           application/json:
  *             schema:
@@ -154,7 +154,7 @@ router.get("/blagues", getAllJokes);
  *                   type: string
  *                   example: "Aucune blague disponible."
  *       500:
- *         description: Erreur lors de la récupération d'une blague aléatoire
+ *         description: Error retrieving a random joke
  *         content:
  *           application/json:
  *             schema:
@@ -164,18 +164,18 @@ router.get("/blagues", getAllJokes);
  *                   type: string
  *                   example: "Une erreur s'est produite lors de la récupération d'une blague aléatoire. Veuillez réessayer."
  */
-router.get("/blagues/random", getRandomJoke);
+router.get("/jokes/random", getRandomJoke);
 
 /**
  * @swagger
- * /blagues/{id}:
+ * /jokes/{id}:
  *   get:
- *     summary: Récupérer une blague à partir d'un ID
+ *     summary: Retrieve a joke by ID
  *     parameters:
  *       - in: path
  *         name: id
  *         required: true
- *         description: ID de la blague
+ *         description: L'ID de la blague
  *         schema:
  *           type: integer
  *     responses:
@@ -196,7 +196,7 @@ router.get("/blagues/random", getRandomJoke);
  *                   type: string
  *                   example: "Parce que sinon ils tombent dans le bateau."
  *       404:
- *         description: Blague non trouvée
+ *         description: Joke not found
  *         content:
  *           application/json:
  *             schema:
@@ -206,7 +206,7 @@ router.get("/blagues/random", getRandomJoke);
  *                   type: string
  *                   example: "Blague non trouvée. L'ID fourni ne correspond à aucune blague existante. Veuillez vérifier l'ID et réessayer."
  *       500:
- *         description: Erreur lors de la récupération de la blague
+ *         description: Error retrieving the joke
  *         content:
  *           application/json:
  *             schema:
@@ -216,6 +216,6 @@ router.get("/blagues/random", getRandomJoke);
  *                   type: string
  *                   example: "Une erreur s'est produite lors de la récupération de la blague avec l'ID {id}. Veuillez réessayer."
  */
-router.get("/blagues/:id", getJokeById);
+router.get("/jokes/:id", getJokeById);
 
 module.exports = router;

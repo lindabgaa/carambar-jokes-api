@@ -1,11 +1,10 @@
 const Joke = require("../models/jokeModel");
 
-// Fonction pour alimenter la base de données avec des blagues (npm run seed)
-// Seule les questions non existantes en base seront ajoutées
+// ---- Script to seed the database with jokes (npm run seed)
 const seedData = async () => {
-  console.log("Démarrage de la seed des blagues...");
+  console.log("Starting the jokes seeding process...");
 
-  // Liste de 51 blagues
+  // List of 51 jokes
   const jokes = [
     {
       question: "Quelle est la femelle du hamster ?",
@@ -224,9 +223,9 @@ const seedData = async () => {
       addedCount++;
     }
   }
-  console.log(`Total de blagues ajoutées : ${addedCount}`);
+  console.log(`Total jokes added: ${addedCount}`);
 };
 
 seedData().catch((err) => {
-  console.error("Erreur lors de l'insertion des données :", err.message);
+  console.error("Error while inserting data:", err.message);
 });

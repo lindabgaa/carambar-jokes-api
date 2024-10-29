@@ -8,7 +8,7 @@ const Joke = sequelize.define("joke", {
     validate: {
       notEmpty: true,
     },
-    unique: true, // Empêche l'ajout de doublons
+    unique: true, // Prevents duplicate questions
   },
   answer: {
     type: DataTypes.STRING,

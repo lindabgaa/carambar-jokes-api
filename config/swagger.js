@@ -5,10 +5,10 @@ const swaggerOptions = {
   swaggerDefinition: {
     openapi: "3.0.0",
     info: {
-      title: "API de Blagues Carambar",
+      title: "Carambar Jokes API",
       version: "1.0.0",
       description:
-        "Cette API permet de gérer une collection de blagues Carambar. Avec elle, vous pouvez ajouter de nouvelles blagues, récupérer une blague aléatoire, lister toutes les blagues disponibles, et récupérer une blague précise en utilisant son ID, apportant ainsi une touche d’humour à vos projets !",
+        "This API allows you to manage a collection of Carambar jokes. With it, you can add new jokes, retrieve a random joke, list all available jokes, and fetch a specific joke using its ID, bringing a touch of humor to your projects!",
     },
     servers: [
       {

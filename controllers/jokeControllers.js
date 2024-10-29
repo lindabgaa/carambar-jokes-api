@@ -12,7 +12,7 @@ const handleError = (res, statusCode = 500, message, error = null) => {
   res.status(statusCode).json(response);
 };
 
-// Fonction pour ajouter une blague
+// Function to add a joke
 const addJoke = async (req, res) => {
   try {
     const { question, answer } = req.body;
@@ -21,7 +21,7 @@ const addJoke = async (req, res) => {
       return handleError(
         res,
         400,
-        "Le corps de la requête doit contenir 'question' et 'answer'."
+        "The request body must contain 'question' and 'answer'."
       );
     }
 
@@ -34,62 +34,62 @@ const addJoke = async (req, res) => {
       return handleError(
         res,
         400,
-        "La question et la réponse doivent être des chaînes de caractères non vides."
+        "The question and answer must be non-empty strings."
       );
     }
 
     const newJoke = await Joke.create({ question, answer });
     res
       .status(201)
-      .json({ message: "Blague ajoutée avec succès.", joke: newJoke });
+      .json({ message: "Joke successfully added.", joke: newJoke });
   } catch (error) {
     handleError(
       res,
-      "Une erreur s'est produite lors de l'ajout de la blague. Veuillez réessayer.",
+      "An error occurred while adding the joke. Please try again.",
       error
     );
   }
 };
 
-// Fonction pour récupérer toutes les blagues disponibles
+// Function to retrieve all available jokes
 const getAllJokes = async (req, res) => {
   try {
     const jokes = await Joke.findAll();
 
     if (jokes.length === 0) {
-      return handleError(res, 404, "Aucune blague disponible.", null);
+      return handleError(res, 404, "No jokes available.", null);
     }
 
     res.status(200).json(jokes);
   } catch (error) {
     handleError(
       res,
-      "Une erreur s'est produite lors de la récupération des blagues. Veuillez réessayer.",
+      "An error occurred while retrieving jokes. Please try again.",
       error
     );
   }
 };
 
-// Fonction pour récupérer une blague aléatoire
+// Function to retrieve a random joke
 const getRandomJoke = async (req, res) => {
   try {
     const joke = await Joke.findOne({ order: sequelize.random() });
 
     if (!joke) {
-      return handleError(res, 404, "Aucune blague disponible.", null);
+      return handleError(res, 404, "No jokes available.", null);
     }
 
     return res.status(200).json(joke);
   } catch (error) {
     handleError(
       res,
-      "Une erreur s'est produite lors de la récupération d'un blague aléatoire. Veuillez réessayer.",
+      "An error occurred while retrieving a random joke. Please try again.",
       error
     );
   }
 };
 
-// Fonction pour récupérer une blague par son id
+// Function to retrieve a joke by its ID
 const getJokeById = async (req, res) => {
   try {
     const joke = await Joke.findByPk(req.params.id);
@@ -98,7 +98,7 @@ const getJokeById = async (req, res) => {
       return handleError(
         res,
         404,
-        "Blague non trouvée. L'ID fourni ne correspond à aucune blague existante. Veuillez vérifier l'ID et réessayer."
+        "Joke not found. The provided ID does not match any existing joke. Please check the ID and try again."
       );
     }
 
@@ -106,7 +106,7 @@ const getJokeById = async (req, res) => {
   } catch (error) {
     handleError(
       res,
-      "Une erreur s'est produite lors de la récupération de la blague avec l'ID {id}. Veuillez réessayer.",
+      "An error occurred while retrieving the joke with ID {id}. Please try again.",
       error
     );
   }
