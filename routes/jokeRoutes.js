@@ -63,13 +63,13 @@ const {
  *       '500':
  *         description: Error adding the joke.
  *         content:
-           application/json:
-             schema:
-               type: object
-               properties:
-                 message:
-                   type: string
-                   example: "Une erreur s'est produite lors de l'ajout de la blague. Veuillez réessayer."
+ *           application/json:
+ *             schema:
+ *               type: object
+ *               properties:
+ *                 message:
+ *                   type: string
+ *                   example: "Une erreur s'est produite lors de l'ajout de la blague. Veuillez réessayer."
  */
 router.post("/jokes", addJoke);
 

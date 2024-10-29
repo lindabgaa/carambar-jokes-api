@@ -5,7 +5,9 @@
 
 The **Carambar Jokes API** is a web application developed with **Node.js** and **Express**. Using **Sequelize** to interact with a **SQLite** database, this API provides endpoints to add new jokes, view all jokes, retrieve a random joke, and access a specific joke by its ID. It is documented with **Swagger**, making integration and usage straightforward. The project is deployed on **Render.com**.
 
-[API Documentation]()
+[API Documentation](https://carambar-jokes-api.onrender.com/api/v1/docs)
+
+[![Endpoint Badge](https://img.shields.io/endpoint?url=https%3A%2F%2Fcarambar-jokes-api.onrender.com%2Fapi%2Fv1%2Fstatus?style=flat-square)](https://stats.uptimerobot.com/Upe7finkYZ/797919584)
 
 ## Tech Stack
 
