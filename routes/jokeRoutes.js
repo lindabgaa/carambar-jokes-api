@@ -36,7 +36,7 @@ const {
  *               properties:
  *                 message:
  *                   type: string
- *                   example: "Blague ajoutée avec succès."
+ *                   example: "Joke successfully added."
  *                 joke:
  *                   type: object
  *                   properties:
@@ -59,7 +59,7 @@ const {
  *               properties:
  *                 message:
  *                   type: string
- *                   example: "La question et la réponse doivent être des chaînes de caractères non vides."
+ *                   example: "The question and answer must be non-empty strings."
  *       '500':
  *         description: Error adding the joke.
  *         content:
@@ -69,7 +69,7 @@ const {
  *               properties:
  *                 message:
  *                   type: string
- *                   example: "Une erreur s'est produite lors de l'ajout de la blague. Veuillez réessayer."
+ *                   example: "An error occurred while adding the joke. Please try again."
  */
 router.post("/jokes", addJoke);
 
@@ -106,7 +106,7 @@ router.post("/jokes", addJoke);
  *               properties:
  *                 message:
  *                   type: string
- *                   example: "Aucune blague disponible."
+ *                   example: "No jokes available."
  *       500:
  *         description: Error retrieving jokes
  *         content:
@@ -116,7 +116,7 @@ router.post("/jokes", addJoke);
  *               properties:
  *                 message:
  *                   type: string
- *                   example: "Une erreur s'est produite lors de la récupération des blagues. Veuillez réessayer."
+ *                   example: "An error occurred while retrieving jokes. Please try again."
  */
 router.get("/jokes", getAllJokes);
 
@@ -152,7 +152,7 @@ router.get("/jokes", getAllJokes);
  *               properties:
  *                 message:
  *                   type: string
- *                   example: "Aucune blague disponible."
+ *                   example: "No jokes available."
  *       500:
  *         description: Error retrieving a random joke
  *         content:
@@ -162,7 +162,7 @@ router.get("/jokes", getAllJokes);
  *               properties:
  *                 message:
  *                   type: string
- *                   example: "Une erreur s'est produite lors de la récupération d'une blague aléatoire. Veuillez réessayer."
+ *                   example: "An error occurred while retrieving a random joke. Please try again."
  */
 router.get("/jokes/random", getRandomJoke);
 
@@ -204,7 +204,7 @@ router.get("/jokes/random", getRandomJoke);
  *               properties:
  *                 message:
  *                   type: string
- *                   example: "Blague non trouvée. L'ID fourni ne correspond à aucune blague existante. Veuillez vérifier l'ID et réessayer."
+ *                   example: "Joke not found. The provided ID does not match any existing joke. Please check the ID and try again."
  *       500:
  *         description: Error retrieving the joke
  *         content:
@@ -214,7 +214,7 @@ router.get("/jokes/random", getRandomJoke);
  *               properties:
  *                 message:
  *                   type: string
- *                   example: "Une erreur s'est produite lors de la récupération de la blague avec l'ID {id}. Veuillez réessayer."
+ *                   example: "An error occurred while retrieving the joke with ID {id}. Please try again."
  */
 router.get("/jokes/:id", getJokeById);
 

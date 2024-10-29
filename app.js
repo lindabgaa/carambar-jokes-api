@@ -66,7 +66,7 @@ app.get("/api/v1/status", async (req, res) => {
 
       const status =
         monitorData.monitors[0].status === 2 ? "Online" : "Offline";
-      const color = status === "Online" ? "#97c40e" : "#cc573f";
+      const color = status === "Online" ? "#66bb6a" : "#d32f2f";
 
       return res.status(200).json({
         schemaVersion: 1,
