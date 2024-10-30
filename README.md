@@ -51,18 +51,27 @@ To set up this endpoint, follow these steps:
 
 4. **Obtain your Monitor ID**:
 
-- You can use Postman to make a POST request to `https://api.uptimerobot.com/v2/getMonitors?api_key=YOUR_KEY` using your API key. The response will contain the ID of your monitor.
+- You can use [Hoppscotch](https://hoppscotch.io/) to make a quick **POST** request to `https://api.uptimerobot.com/v2/getMonitors?api_key=YOUR_KEY` using your API key. The response will contain the ID of your monitor.
 
 5. **Set up environment variables** in your .env file:
 
 - `UPTIME_ROBOT_API_KEY` : Uptime Robot API key for authentication.
 - `UPTIME_ROBOT_MONITOR_ID` : ID of the Uptime Robot monitor for the API.
 
-6. **Create a badge** on [Shields.io](https://shields.io/):
+6. **Create a Status page**:
+
+- After logging in, go to the "Status Pages" section.
+- Click on "Create Status Page".
+- Fill in the required details, such as the name and description of your status page.
+- Select the monitors you want to include.
+- Click "Create Status Page".
+
+7. **Create a badge** on [Shields.io](https://shields.io/):
 
 - Choose to create an **Endpoint Badge**.
-- Specify the URL of your API status endpoint (e.g., https://carambar-jokes-api.onrender.com/api/v1/status).
+- Specify the URL of your API status endpoint (e.g., https://YOUR_API_URL/api/v1/status).
 - Use the generated badge URL in your **README** to display the current status of your API.
+- Set the link for the badge to your status page, allowing users to click on the badge to view the status of your API directly.
 
 ## License
 
