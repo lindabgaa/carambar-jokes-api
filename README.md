@@ -27,9 +27,11 @@ This project is a web application developed with **Node.js** and **Express**. Us
 - `API_URL` # Deployment URL of the API
 
 5. Run the setup script: `npm run setup`, that will:
-   - Install required dependencies. (`npm install`)
-   - Run database migrations. (`npm run migration`)
-   - Seed the database with initial data. (`npm run seed`)
+
+- Install required dependencies.
+- Run database migrations.
+- Seed the database with initial data.
+
 6. Start the development server: `npm run dev`
 7. Access the API documentation: `http://localhost:PORT/api/v1/docs`
 
