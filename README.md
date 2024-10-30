@@ -16,17 +16,23 @@ This project is a web application developed with **Node.js** and **Express**. Us
 
 ## Installation & Configuration
 
-- Clone the repository: `git clone https://github.com/lindabgaa/carambar-jokes-api.git`
-- Navigate to the project folder: `cd carambar-jokes-api`
-- Create a .env file: `touch .env`
-- Add the necessary environment variables:
-  - `NODE_ENV` # Runtime environment (development, test, or production)
-  - `PORT` # (e.g., 8080)
-  - `CORS_ORIGINS` # Allowed origins for CORS requests
-  - `API_URL` # Deployment URL of the API
-- Run the setup script: `npm run setup`
-- Start the development server: `npm run dev`
-- Access the API documentation: `http://localhost:PORT/api/v1/docs`
+1. Clone the repository: `git clone https://github.com/lindabgaa/carambar-jokes-api.git`
+2. Navigate to the project folder: `cd carambar-jokes-api`
+3. Create a .env file: `touch .env`
+4. Add the necessary environment variables:
+
+- `NODE_ENV` # Runtime environment (development, test, or production)
+- `PORT` # (e.g., 8080)
+- `CORS_ORIGINS` # Allowed origins for CORS requests
+- `API_URL` # Deployment URL of the API
+
+5. Run the setup script: `npm run setup`
+   This command will:
+   - Install required dependencies.
+   - Run database migrations.
+   - Seed the database with initial data.
+6. Start the development server: `npm run dev`
+7. Access the API documentation: `http://localhost:PORT/api/v1/docs`
 
 ## Endpoint /api/v1/status
 
@@ -71,7 +77,7 @@ To set up this endpoint, follow these steps:
 - Choose to create an **Endpoint Badge**.
 - Specify the URL of your API status endpoint (e.g., https://YOUR_API_URL/api/v1/status).
 - Use the generated badge URL in your **README** to display the current status of your API.
-- Set the link for the badge to your status page, allowing users to click on the badge to view the status of your API directly.
+- Set the link for the badge to your status page, allowing users to click on the badge to view the Uptime Robot status page directly.
 
 ## License
 
