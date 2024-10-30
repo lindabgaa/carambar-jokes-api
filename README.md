@@ -21,10 +21,10 @@ This project is a web application developed with **Node.js** and **Express**. Us
 3. **Create a .env file**: `touch .env`
 4. **Add the necessary environment variables**:
 
-- `NODE_ENV` # Runtime environment (development, test, or production)
-- `PORT` # (e.g., 8080)
-- `CORS_ORIGINS` # Allowed origins for CORS requests
-- `API_URL` # Deployment URL of the API
+- `NODE_ENV` # Runtime environment (set to development, test, or production)
+- `PORT` # The port on which your API will run locally (e.g., 8080)
+- `CORS_ORIGINS` # Allowed origins for CORS requests (e.g., http://localhost:PORT,https://YOUR_DOMAIN.com)
+- `API_URL` # The URL where your API is hosted in production (e.g., https://YOUR_DOMAIN.com/api/v1).
 
 5. **Run the setup script**: `npm run setup`, that will:
 
@@ -76,7 +76,7 @@ To set up this endpoint, follow these steps:
 7. **Create a badge** on [Shields.io](https://shields.io/):
 
 - Choose to create an **Endpoint Badge**.
-- Specify the URL of your API status endpoint (e.g., https://YOUR_API_URL/api/v1/status).
+- Specify the URL of your API status endpoint (e.g., https://YOUR_DOMAIN/api/v1/status).
 - Use the generated badge URL in your **README** to display the current status of your API.
 - Set the link for the badge to your status page, allowing users to click on the badge to view the Uptime Robot status page directly.
 
