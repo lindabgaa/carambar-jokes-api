@@ -1,10 +1,10 @@
-# Carambar Jokes API - Express/Node.js Project
+# Carambar Jokes API - Express/SQLite Project
 
 ![Project Status](https://img.shields.io/badge/Project%20Status-Finished-green?style=flat-square)
 [![CodeFactor](https://www.codefactor.io/repository/github/lindabgaa/carambar-jokes-api/badge?style=flat-square)](https://www.codefactor.io/repository/github/lindabgaa/carambar-jokes-api)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
-This project is a web application developed with **Node.js** and **Express**. Using **Sequelize** to interact with a **SQLite** database, this API provides endpoints to add new jokes, view all jokes, retrieve a random joke, and access a specific joke by its ID. It is documented with **Swagger**, making integration and usage straightforward. The project is deployed on **Render.com**.
+This project is a web application developed with **Express**. Using **Sequelize** ORM to interact with a **SQLite** database, this API provides endpoints to add new jokes, view all jokes, retrieve a random joke, and access a specific joke by its ID. It is documented with **Swagger** and deployed on **Render.com**.
 
 [API Documentation](https://carambar-jokes-api.onrender.com/api/v1/docs)
 
@@ -12,7 +12,7 @@ This project is a web application developed with **Node.js** and **Express**. Us
 
 ## Tech Stack
 
-- **Node.js**, **Express**, **Sequelize**, **SQLite**, **Swagger**
+- **Node**, **Express**, **SQLite**, **Sequelize**, **Swagger**
 
 ## Installation & Configuration
 
@@ -67,7 +67,7 @@ To set up this endpoint, follow these steps:
 
 6. **Create a Status page**:
 
-- After logging in, go to the "Status Pages" section.
+- After logging in, go to the "Status Pages" section on [Uptime Robot](https://uptimerobot.com/).
 - Click on "Create Status Page".
 - Fill in the required details, such as the name and description of your status page.
 - Select the monitors you want to include.
